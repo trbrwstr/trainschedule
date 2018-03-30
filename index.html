@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Train Time</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--CSS and Javascript Link-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <script src="assets/javascript/app.js"></script>
+    <!--Moment JS-->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <!--Material Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Google Font-->
+    <link href="https://fonts.googleapis.com/css?family=Kavoon" rel="stylesheet">
+    <!--Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="card-panel z-depth-2 deep-purple darken-2 white-text">
+                <h3 class="center-align">Train Schedule</h3></div>
+        </div>
+        <div class="row">
+            <!-- Display Panel -->
+            <div class="card-panel trainInfo deep-purple darken-2 white-text">
+                <h4 class="center-align">Current Train Schedule</h4>
+                <table class="table striped center bordered responsive-table" id="trainTable">
+                    <thead>
+                        <tr>
+                            <th>Train Name</th>
+                            <th>Destination</th>
+                            <th>Frequency (minutes)</th>
+                            <th>Next Arrival</th>
+                            <th>Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- Info Submission Panel -->
+        <div class="row">
+            <div class="card-panel deep-purple darken-2 white-text">
+                <h4 class="center-align">Add Your Train</h4>
+                <form>
+                    <div class="input-field col s12">
+                        <input type="text" class="validate" id="trainNameInput">
+                        <label for="">Train Name</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input type="text" class="validate" id="destinationInput">
+                        <label for="">Destination</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input type="time" class="validate" id="firstInput">
+                        <label class="active" for="">First Train (HH:mm Military Time)</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input type="number" class="validate" id="frequencyInput">
+                        <label for="">Frequency (minutes)</label>
+                    </div>
+                    <button type="submit" class="btn deep-purple accent-2 btn waves-effect waves-light btn-small" id="addTrainBtn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
